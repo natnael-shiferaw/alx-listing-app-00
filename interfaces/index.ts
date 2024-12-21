@@ -1,5 +1,19 @@
-// Placeholder for interfaces
-// Add your interfaces here as needed
-
-export {};
-
+// interface for Property data
+export interface PropertyProps {
+    name: string,
+    address: {
+        state: string,
+        city: string,
+        country: string,
+    },
+    rating: number,
+    category: string[],
+    price: number,
+    offers: {
+        bed: string,
+        shower: string,
+        occupants: string,
+    },
+    image: string,
+    discount: string,
+}
