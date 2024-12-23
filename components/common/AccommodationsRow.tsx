@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaBed, FaHome, FaTree, FaCampground, FaSwimmingPool, FaMountain, FaWater, FaGavel } from 'react-icons/fa';
-import { GiMansion, GiFarmTractor, GiIsland, GiBeachBucket, GiHouse, GiVillage, GiLake, GiTreehouse } from 'react-icons/gi';
+import { FaBed, FaHome, FaTree, FaCampground, FaSwimmingPool, FaMountain, FaGavel } from 'react-icons/fa';
+import { GiWaterDrop,GiFarmTractor, GiIsland, GiBeachBucket, GiHouse, GiVillage, GiTreehouse } from 'react-icons/gi';
 import { MdOutlineVilla } from 'react-icons/md';
 
 function AccommodationsRow() {
   const accommodations = [
     { name: 'Rooms', icon: <FaBed /> },
-    { name: 'Mansion', icon: <GiMansion /> },
+    { name: 'Mansion', icon: <GiHouse /> }, // Replaced GiMansion with GiHouse
     { name: 'Country Side', icon: <GiVillage /> },
     { name: 'Villa', icon: <MdOutlineVilla /> },
     { name: 'Tropical', icon: <GiBeachBucket /> },
@@ -17,7 +17,7 @@ function AccommodationsRow() {
     { name: 'Camping', icon: <FaCampground /> },
     { name: 'Apartment', icon: <FaHome /> },
     { name: 'House', icon: <GiHouse /> },
-    { name: 'Lakefront', icon: <GiLake /> },
+    { name: 'Lakefront', icon: <GiWaterDrop /> }, // Replaced GiLake with GiWaterDrop
     { name: 'Farm House', icon: <GiFarmTractor /> },
     { name: 'Tree House', icon: <GiTreehouse /> },
     { name: 'Cabins', icon: <FaTree /> },
@@ -25,15 +25,17 @@ function AccommodationsRow() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-between items-center gap-4 px-4">
+    <div className="flex flex-wrap justify-start items-center gap-4 px-0">
       {accommodations.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col items-center text-center text-gray-700"
-          style={{ minWidth: '5rem', flex: '1 1 calc(5.8% - 10px)' }}
+          className="flex flex-col items-center text-center text-gray-700 hover:cursor-pointer"
+          style={{ minWidth: '3rem', flex: '1 1 calc(4.5% - 5px)',
+                   maxWidth: '4rem',
+           }}
         >
-          <div className="text-4xl text-green-600 mb-2">{item.icon}</div>
-          <p className="text-sm font-medium">{item.name}</p>
+          <div className="text-xl mb-2">{item.icon}</div>
+          <p className="text-xs font-medium">{item.name}</p>
         </div>
       ))}
     </div>

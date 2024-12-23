@@ -6,7 +6,7 @@ import AccommodationsRow from '../common/AccommodationsRow'
 
 function Header() {
   return (
-    <header className='mb-8'>
+    <header className='mb-6'>
       {/**Information section */}
       <div className="green_section mb-2 flex gap-2 justify-center items-center text-white p-4 text-md font-medium">
           <span className='text-white h-3 w-3'><CiMail /></span>
@@ -14,14 +14,14 @@ function Header() {
           <button className='bg-black py-1 px-2 rounded-full text-sm' type='button'>more info</button>
       </div>
       {/**Navbar */}
-      <nav className='bg-white flex flex-col gap-3 py-2'>
+      <nav className='bg-white flex flex-col gap-1 py-2'>
         <div className='flex justify-between items-center'>
           {/**logo */}
           <Image src={alx_logo} width={50} height={50} alt='logo' />
           {/** Search Parameters */}
           <div className='flex justify-between gap-8'>
             {/**location search */}
-            <div className=' flex flex-col space-y-4 border border-slate-100 rounded-xl p-1 items-center'>
+            <div className=' flex flex-col space-y-4 border border-slate-100 rounded-xl p-3 items-center'>
               <label htmlFor='location_input'>Location</label>
               <input type='text' id='location_input' name='location_input' placeholder='Enter location'
                      className='w-40 text-sm' />
