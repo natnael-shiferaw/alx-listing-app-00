@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className='mb-6'>
       {/**Information section */}
-      <div className="green_section mb-2 flex gap-2 justify-center items-center text-white p-4 text-md font-medium">
+      <div className="green_section mb-2 flex gap-2 justify-center items-center text-white p-4 text-sm md:text-md font-medium">
           <span className='text-white h-3 w-3'><CiMail /></span>
           <span>Overseas trip? Get the latest information on travel guides</span>
           <button className='bg-black py-1 px-2 rounded-full text-sm' type='button'>more info</button>

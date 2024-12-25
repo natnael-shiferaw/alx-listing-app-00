@@ -25,7 +25,7 @@ function AccommodationsRow() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-start items-center gap-4 px-0">
+    <div className="flex flex-wrap justify-start items-center gap-4 xl:gap-6 px-0">
       {accommodations.map((item, index) => (
         <div
           key={index}
@@ -34,8 +34,8 @@ function AccommodationsRow() {
                    maxWidth: '4rem',
            }}
         >
-          <div className="text-xl mb-2">{item.icon}</div>
-          <p className="text-xs font-medium">{item.name}</p>
+          <div className="text-lg md:text-xl lg:text-2xl mb-1">{item.icon}</div>
+          <p className="text-xs sm:text-sm font-medium">{item.name}</p>
         </div>
       ))}
     </div>
