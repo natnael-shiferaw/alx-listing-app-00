@@ -126,7 +126,6 @@ const Header = () => {
             </button>
             </div>
             
-            
             <div>
               <button className="p-4 bg-primary-green text-white rounded-full">
                 <CiUser className="text-lg" />
@@ -147,7 +146,7 @@ const Header = () => {
         </div>
 
         {/* Accommodations Row */}
-        {/* <AccommodationsRow /> */}
+        <AccommodationsRow />
       </div>
     </header>
   );
